@@ -1,5 +1,4 @@
 using JJORY.Module;
-using JJORY.Scene.Dummy;
 using JJORY.Util;
 using System.Collections;
 using UnityEngine;
@@ -30,9 +29,10 @@ namespace JJORY.Controller
         {
             public IEnumerator Execute()
             {
-                yield return null;
+                UIController.Instance.CloseMask();
                 Utils.CreateLogMessage<BootstrapController>("2. SceneChangeManager LoadComplete!");
-                SceneLoadController.Instance.LoadSceneByTags("main");
+                SceneLoadController.Instance.LoadSceneByTags("Main");
+                yield return null;
             }
         }
 
@@ -83,7 +83,7 @@ namespace JJORY.Controller
         #region LifeCycle
         private void Start()
         {
-            
+            ModuleSetting();
         }
         #endregion
 
@@ -98,10 +98,10 @@ namespace JJORY.Controller
 
 
             SequenceActionUtils.Instance.Enqueue(sceneLoadManager);
-            SequenceActionUtils.Instance.Enqueue(sceneChangeManager);
             SequenceActionUtils.Instance.Enqueue(addressableManager);
             SequenceActionUtils.Instance.Enqueue(jsonDataManager);
             SequenceActionUtils.Instance.Enqueue(reactCommunicationManager);
+            SequenceActionUtils.Instance.Enqueue(sceneChangeManager);
 
             SequenceActionUtils.Instance.DoSequenceAction();
         }
