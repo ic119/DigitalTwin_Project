@@ -151,11 +151,11 @@ namespace JJORY.Model
     {
         #region Variable
         [Header("장비 공통 데이터")]
-        public string equipment_Name { get; private set; }
-        public string equipment_Type { get; private set; }
-        public EquipmentUnit equipment_Unit { get; private set; }
-        public string equipment_id { get; private set; }
-        public Vector3 equipment_Position { get; private set; }
+        public string equipmentName { get; private set; }
+        public string equipmentType { get; private set; }
+        public EquipmentUnit equipmentUnit { get; private set; }
+        public int equipmentId { get; private set; }
+        public Vector3 equipmentPosition { get; private set; }
 
 
         [Header("BESS 내부 장비오브젝트 Root")]
@@ -195,7 +195,7 @@ namespace JJORY.Model
         [Header("최상위 및 상위 오브젝트 변수")]
         public GameObject zoneObject;
         public GameObject rootObject;
-        public GameObject parentObject;
+        public GameObject parentContainer;
 
         [Header("콜라이더 변수")]
         public BoxCollider curObjectCollider;
@@ -216,15 +216,15 @@ namespace JJORY.Model
         /// <param name="_data"></param>z
         public void ContainerPropertyInit(ContainerEquipmentData _data)
         {
-            equipment_id = _data.device_Id;
-            equipment_Name = _data.container_Name;
-            equipment_Type = _data.container_Type;
-            if (_data.container_Unit.Equals(EquipmentUnit.Container.ToString()))
+            equipmentId = _data.deviceId;
+            equipmentName = _data.containerName;
+            equipmentType = _data.containerType;
+            if (_data.containerUnit.Equals(EquipmentUnit.Container.ToString()))
             {
-                equipment_Unit = EquipmentUnit.Container;
+                equipmentUnit = EquipmentUnit.Container;
             }
-            containerProperty.SetRackCount(_data.rack_Count);
-            containerProperty.SetRackRow(_data.rack_row);
+            containerProperty.SetRackCount(_data.rackCount);
+            containerProperty.SetRackRow(_data.rackRow);
         }
 
         /// <summary>
@@ -233,17 +233,17 @@ namespace JJORY.Model
         /// <param name="_data"></param>
         public void RackPropertyInit(RackEquipmentData _data)
         {
-            equipment_id = _data.device_Id;
-            equipment_Name = _data.rack_Name;
-            equipment_Type = _data.rack_Type;
+            equipmentId = _data.deviceId;
+            equipmentName = _data.rackName;
+            equipmentType = _data.rackType;
 
-            if (_data.rack_Unit.Equals(EquipmentUnit.Rack.ToString()))
+            if (_data.rackUnit.Equals(EquipmentUnit.Rack.ToString()))
             {
-                equipment_Unit = EquipmentUnit.Rack;
+                equipmentUnit = EquipmentUnit.Rack;
             }
 
-            rackProperty.SetModuleCount(_data.module_Count);
-            rackProperty.SetModuleCol(_data.module_col);
+            rackProperty.SetModuleCount(_data.moduleCount);
+            rackProperty.SetModuleCol(_data.moduleCol);
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace JJORY.Model
         /// <param name="_position"></param>
         public void RackPositionSave(Vector3 _position)
         {
-            equipment_Position = _position;
+            equipmentPosition = _position;
         }
 
         /// <summary>
@@ -261,15 +261,15 @@ namespace JJORY.Model
         /// <param name="_data"></param>
         public void ModulePropertyInit(ModuleEquipmentData _data)
         {
-            equipment_id = _data.device_Id;
-            equipment_Name = _data.module_Name;
-            equipment_Type = _data.module_Type;
-            if (_data.module_Unit.Equals(EquipmentUnit.Module.ToString()))
+            equipmentId = _data.deviceId;
+            equipmentName = _data.moduleName;
+            equipmentType = _data.moduleType;
+            if (_data.moduleUnit.Equals(EquipmentUnit.Module.ToString()))
             {
-                equipment_Unit = EquipmentUnit.Module;
+                equipmentUnit = EquipmentUnit.Module;
             }
-            moduleProperty.SetCellGroupCount(_data.cellGroup_Count);
-            moduleProperty.SetCellGroupCol(_data.cellGroup_col);
+            moduleProperty.SetCellGroupCount(_data.cellGroupCount);
+            moduleProperty.SetCellGroupCol(_data.cellGroupCol);
         }
 
         /// <summary>
@@ -278,17 +278,17 @@ namespace JJORY.Model
         /// <param name="_position"></param>
         public void ModulePositionSave(Vector3 _position)
         {
-            equipment_Position = _position;
+            equipmentPosition = _position;
         }
 
         public void CellGroupPropertyInit(CellGroupEquipmentData _data)
         {
-            equipment_id = _data.device_Id;
-            equipment_Name = _data.cellGroup_Name;
-            equipment_Type = _data.cellGroup_Type;
-            if (_data.cellGroup_Unit.Equals(EquipmentUnit.CellGrounp.ToString()))
+            equipmentId = _data.deviceId;
+            equipmentName = _data.cellGroupName;
+            equipmentType = _data.cellGroupType;
+            if (_data.cellGroupUnit.Equals(EquipmentUnit.CellGrounp.ToString()))
             {
-                equipment_Unit = EquipmentUnit.CellGrounp;
+                equipmentUnit = EquipmentUnit.CellGrounp;
             }
         }
         #endregion

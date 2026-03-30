@@ -14,3 +14,11 @@ public enum EquipmentUnit
     Module,
     CellGrounp
 }
+
+public enum ModelType
+{
+    ZonePrefab,
+    ContainerPrefab,
+    RackPrefab,
+    ModulePrefab
+}

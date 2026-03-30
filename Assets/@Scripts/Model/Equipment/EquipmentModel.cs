@@ -6,16 +6,15 @@ namespace JJORY.Model
     #region Zone Data Set
     public class ZoneData
     {
-        public string serial_No { get; set; }
-        public string zone_Name { get; set; }
-        public string zone_Type { get; set; }
-        public string zone_Unit { get; set; }
-        public int zone_Row { get; set; }
-        public int zone_Col { get; set; }
-        public string device_Id { get; set; }
+        public string zoneName { get; set; }
+        public string zoneType { get; set; }
+        public string zoneUnit { get; set; }
+        public int zoneRow { get; set; }
+        public int zoneCol { get; set; }
+        public int deviceId { get; set; }
         public List<ContainerEquipmentData> containers { get; set; }
-        public ZonePositionData zone_Position { get; set; }
-        public int container_Count { get; set; }
+        public ZonePositionData zonePosition { get; set; }
+        public int containerCount { get; set; }
     }
 
     public class ZonePositionData
@@ -31,14 +30,14 @@ namespace JJORY.Model
     /// 컨테이너(= 최상위) 장비 데이터  
     public class ContainerEquipmentData
     {
-        public string container_Name { get; set; }
-        public string container_Type { get; set; }
-        public string container_Unit { get; set; }
-        public string device_Id { get; set; }
+        public string containerName { get; set; }
+        public string containerType { get; set; }
+        public string containerUnit { get; set; }
+        public int deviceId { get; set; }
         public List<RackEquipmentData> racks { get; set; }
-        public int rack_Count { get; set; }
-        public int rack_row { get; set; }
-        public int rack_col { get; set; }
+        public int rackCount { get; set; }
+        public int rackRow { get; set; }
+        public int rackCol { get; set; }
     }
     #endregion
 
@@ -48,13 +47,13 @@ namespace JJORY.Model
     /// </summary>
     public class RackEquipmentData
     {
-        public string rack_Name { get; set; }
-        public string rack_Type { get; set; }
-        public string rack_Unit { get; set; }
-        public string device_Id { get; set; }
-        public int module_Count { get; set; }
-        public int module_row { get; set; }
-        public int module_col { get; set; }
+        public string rackName { get; set; }
+        public string rackType { get; set; }
+        public string rackUnit { get; set; }
+        public int deviceId { get; set; }
+        public int moduleCount { get; set; }
+        public int moduleRow { get; set; }
+        public int moduleCol { get; set; }
         public List<ModuleEquipmentData> modules { get; set; }
     }
     #endregion
@@ -65,31 +64,22 @@ namespace JJORY.Model
     /// </summary>
     public class ModuleEquipmentData
     {
-        public string module_Name { get; set; }
-        public string module_Type { get; set; }
-        public string module_Unit { get; set; }
-        public string device_Id { get; set; }
-        public int cellGroup_Count { get; set; }
-        public int cellGroup_row { get; set; }
-        public int cellGroup_col { get; set; }
+        public string moduleName { get; set; }
+        public string moduleType { get; set; }
+        public string moduleUnit { get; set; }
+        public int deviceId { get; set; }
+        public int cellGroupCount { get; set; }
+        public int cellGroupRow { get; set; }
+        public int cellGroupCol { get; set; }
         public List<CellGroupEquipmentData> cells { get; set; }
     }
 
     public class CellGroupEquipmentData
     {
-        public string cellGroup_Name { get; set; }
-        public string cellGroup_Type { get; set; }
-        public string cellGroup_Unit { get; set; }
-        public string device_Id { get; set; }
-    }
-    #endregion
-
-    #region Event Data Set
-    public class EventEquipmentData
-    {
-        public string device_Id { get; set; }
-        public string device_Name { get; set; }
-        public string device_Unit { get; set; }
+        public string cellGroupName { get; set; }
+        public string cellGroupType { get; set; }
+        public string cellGroupUnit { get; set; }
+        public int deviceId { get; set; }
     }
     #endregion
 

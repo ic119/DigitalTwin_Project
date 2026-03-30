@@ -49,7 +49,7 @@ namespace JJORY.Scene.Dummy
             {
                 UIController.Instance.CloseMask();
                 Utils.CreateLogMessage<DummySceneController>("4. Scene 로드 성공");
-                SceneLoadController.Instance.LoadSceneByTags("Login");
+                SceneLoadController.Instance.LoadSceneByTags("MainScene");
                 yield return null;
             }
         }
