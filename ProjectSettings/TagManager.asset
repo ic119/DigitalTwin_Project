@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Map
-  - Spawn
-  - CinemachineTarget
+  - Container
+  - Rack
+  - Module
   layers:
   - Default
   - TransparentFX
@@ -15,10 +16,10 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - ZoneLayer
+  - ContainerLayer
+  - RackLayer
+  - ModuleLayer
   - 
   - 
   - 

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Objects
+  m_EditorClassIdentifier: 
+  m_GroupName: Objects
+  m_GUID: c31d44ae989cedf48852f7538b6a04de
+  m_SerializeEntries:
+  - m_GUID: 2b0de39ae542ca04c96b1411cd3c3c1d
+    m_Address: ModulePrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3020ec59802bcb140a827650d21df5d9
+    m_Address: FloorTile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 34aa1ad8ea715d64dbcb9eff608729c3
+    m_Address: ContainerPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c6d36742f87430409713a3ae63b4880
+    m_Address: RackPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3cb2998097a766740aa3f28d219dd1cc
+    m_Address: ZoneTile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7498f9b7ba6761c4bac2c1aab620b9b9, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 2bac1d91dab4ec345bf226c25ad49250, type: 2}
+    - {fileID: 11400000, guid: cdce3f9858ee1364f9c3e34cbf2266bc, type: 2}
